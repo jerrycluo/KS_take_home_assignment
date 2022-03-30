@@ -12,6 +12,8 @@ Please fork this repo, complete the assignment, and once you are finished, send 
 
 2. Clone your fork to your local machine.
 
+![clone_locally](https://user-images.githubusercontent.com/45079557/160928496-99f356cb-683d-48d1-8122-22d2945d71dc.jpg)
+
 3. Install dependencies using: `pip3 install -r requirements.txt`
 
 4. In the project directory, run `python app.py` to start the Flask application
