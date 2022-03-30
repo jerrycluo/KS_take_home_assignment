@@ -2,7 +2,7 @@
 
 Please read the following instructions carefully. 
 
-Please fork this repo, complete the assignment, and once you are finished, send a link to your repo to: @kabui2021
+Please fork this repo, complete the assignment, and once you are finished, send a link to your repo to: @Kabui2021
 
 ## Getting Started
 
@@ -16,8 +16,8 @@ Please fork this repo, complete the assignment, and once you are finished, send 
 
 4. In the project directory, run `python app.py` to start the Flask application
 
-## Task 1
-Create an API endpoint using the Flask library that calculates the beta for each of the FAANG stocks. Your beta calculation should use the daily adjusted close data from the yfinance API. The JSON response of the GET request should be formatted similar to:
+## Task
+Create an API endpoint using the Flask library that calculates the beta for each of the FAANG stocks. The response of the GET request should be formatted similar to JSON response below:
 
 ```json
 {
@@ -29,9 +29,20 @@ Create an API endpoint using the Flask library that calculates the beta for each
 }
 ```
 
+## Data
+You should use daily adjusted close data for your beta calculation. A free data provider that you can use is the yfinance library.
 
-## Task 2
-Write the appropriate amount of tests to thoroughly cover your endpoint's code. 
+## Tests
+Write the appropriate amount of tests to thoroughly cover your endpoint's code.
+
+## Share
+Add @Kabui2021 as a contributor to your project when you are finished.
+
+## How your code will be evaluated
+Your code will be evaluated on the following criteria:
+* Correctness: Is the code completed? Does it function has instructed?
+* Quality: Is the code readable and well structured?
+* Tests: Do your tests cover the code well?
 
 
 
