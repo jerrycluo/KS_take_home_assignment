@@ -19,7 +19,7 @@ Please fork this repo, complete the assignment, and once you are finished, send 
 4. In the project directory, run `python app.py` to start the Flask application
 
 ## Task
-Create an API endpoint using the Flask library that calculates the beta for each of the FAANG stocks. The response of the GET request should be formatted similar to JSON response below:
+Edit the Flask API endpoint /beta_fanng in handlers/routes.py to calculate the beta for each of the FAANG stocks. The response of the GET request should be formatted similar to JSON response below:
 
 ```json
 {
