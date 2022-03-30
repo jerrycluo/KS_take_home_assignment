@@ -8,6 +8,8 @@ Please fork this repo, complete the assignment, and once you are finished, send 
 
 1. Fork this repo.
 
+![fork_repo](https://user-images.githubusercontent.com/45079557/160927612-a7fed5a9-55a4-4910-a19d-13d867417084.jpg)
+
 2. Clone your fork to your local machine.
 
 3. Install dependencies using: `pip3 install -r requirements.txt`
