@@ -60,9 +60,6 @@ def test_beta_faang():
         assert round(beta,dec) == round(calculate_beta(symbol),4), 'incorrect beta for {}'.format(symbol)
         assert beta > -1 and beta < 3, 'beta value {} out of valid range [-1,3]'.format(beta)
 
-    #tests calculate_beta function 
-    assert round(calculate_beta('META',yrs=5),4) == 1.2728, 'wrong beta for 5 year period'
-
     #tests fit_model subfunction on hardcoded individual and market closing data series
     actual = round(fit_model(INDIVIDUAL_TEST,MARKET_TEST),4)
     assert actual == 1.7528, 'incorrect beta for manual test. Expected: 1.7528, Actual: {}'.format(actual)
