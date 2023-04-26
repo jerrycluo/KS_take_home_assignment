@@ -2,9 +2,9 @@ import yfinance as yf
 from datetime import date as dt, timedelta as delta
 import statsmodels.api as sm
 
-def calculate_beta(symbol,yrs=7,slope=True):
+def calculate_beta(symbol,yrs=5,slope=True):
     #formulas & methods: https://www.benzinga.com/money/how-to-calculate-beta
-    #defaults to using slope formula on 7 years of daily closing data
+    #defaults to using slope formula on 5 years of daily closing data
     
     if(slope):
         return linear_regression(symbol,yrs)
