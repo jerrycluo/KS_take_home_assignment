@@ -1,4 +1,9 @@
+from utils import calculate_beta
+
 def configure_routes(app):
+    
+    FAANG_SYMBOLS = ["META", "AAPL", "AMZN", "NFLX", "GOOG"]
+    #FAANG ticker symbols hardcoded
     
     @app.route('/')
     def home():
@@ -6,5 +11,8 @@ def configure_routes(app):
     
     @app.route('/beta', methods=["GET"])
     def beta_faang():
-        # Write your code below ...
-        pass
+        
+        # {symbol:beta} dict comprehension
+        betas = {symbol:calculate_beta(symbol) for symbol in FAANG_SYMBOLS}
+        return betas
+   
