@@ -14,4 +14,4 @@ def configure_routes(app):
         # Write your code below ...
         # returns {symbol:beta} dict
         betas = {symbol:calculate_beta(symbol) for symbol in FAANG_SYMBOLS}
-        return betas
+        return betas, 200
