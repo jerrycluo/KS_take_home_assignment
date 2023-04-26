@@ -3,8 +3,8 @@ from datetime import date as dt, timedelta as delta
 import statsmodels.api as sm
 
 def calculate_beta(symbol,yrs=5):
-    #formulas & methods: https://www.benzinga.com/money/how-to-calculate-beta
-    #defaults to using slope formula on 5 years of daily closing data
+    # formulas & methods: https://www.benzinga.com/money/how-to-calculate-beta
+    # defaults to using slope formula on 5 years of daily closing data
     # using linear regression, more intuitively gets beta from parameter 
     # linear regression assumptions should be met. 
 
@@ -16,13 +16,13 @@ def calculate_beta(symbol,yrs=5):
     return fit_model(individual_close,market_close)
     
 def fit_model(individual_close,market_close):
-    #fits model for beta parameter
+    # fits model for beta parameter
     
-    #Dropping first row with NaN as percentage change
+    # dropping first row with NaN as percentage change
     individual_pct_change = individual_close.pct_change().iloc[1:]
     market_pct_change = market_close.pct_change().iloc[1:]
 
-    #create model
+    # fit model
     X = sm.add_constant(market_pct_change)
     model = sm.OLS(individual_pct_change, X)
     results = model.fit()
