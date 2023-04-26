@@ -51,7 +51,7 @@ def test_beta_faang():
     response = client.get(url)
     betas = json.loads(response.get_data().decode('utf-8'))
 
-    #tests output Flask app outputs 
+    # tests output Flask app outputs 
     assert isinstance(betas,dict), 'wrong betas type: {}. Expects dict'.format(type(betas))
     for symbol,beta in betas.items():
         dec = 4
@@ -60,7 +60,7 @@ def test_beta_faang():
         assert round(beta,dec) == round(calculate_beta(symbol),4), 'incorrect beta for {}'.format(symbol)
         assert beta > -1 and beta < 3, 'beta value {} out of valid range [-1,3]'.format(beta)
 
-    #tests fit_model subfunction on hardcoded individual and market closing data series
+    # tests fit_model subfunction on hardcoded individual and market closing data series
     actual = round(fit_model(INDIVIDUAL_TEST,MARKET_TEST),4)
     assert actual == 1.7528, 'incorrect beta for manual test. Expected: 1.7528, Actual: {}'.format(actual)
 
@@ -76,10 +76,8 @@ def validate_against_yfinance_beta():
     response = client.get(url)
     betas = json.loads(response.get_data().decode('utf-8'))
 
-    diff = {}
-    for i in betas:
-        diff[i] = abs(betas[i] - yf.Ticker(i).info['beta'])
-                    
+    diff = {i:abs(betas[i] - yf.Ticker(i).info['beta']) for i in betas}
+
     print('difference between calculated beta and yahoo finance beta for each FAANG stock:')
     print(diff)
 
