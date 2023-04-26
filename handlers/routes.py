@@ -1,3 +1,4 @@
+from utils import calculate_beta
 
 FAANG_SYMBOLS = ["META", "AAPL", "AMZN", "NFLX", "GOOG"]
 #FAANG ticker symbols hard-coded
